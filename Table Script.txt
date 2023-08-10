@@ -1,0 +1,23 @@
+
+// Task Management DB script
+
+CREATE TABLE TASK (
+    task_id int NOT NULL AUTO_INCREMENT,
+    user_id int,
+    title varchar(255),
+    description varchar(255),
+    due_Date datetime,
+    start_Date datetime,
+    status varchar(50),
+    completed_date datetime,
+	progress int,
+    PRIMARY KEY (task_id)
+);
+
+
+CREATE TABLE ASSIGNMENT (
+    assign_id int NOT NULL AUTO_INCREMENT,
+	task_Id int NOT NULL,
+	user_id varchar(255),
+	PRIMARY KEY (assign_id)
+);
